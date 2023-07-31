@@ -1,8 +1,5 @@
 # curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
 
 ## Getting Started
 
@@ -45,7 +42,6 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -58,37 +54,18 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [VET-CLINIC-DB] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[]** is a database  to create a data structure for a vet clinic. The database includes tables for animals, animal owners, clinic employees, and visits. These tables store comprehensive information about each aspect, such as animal details, owner information, employee data, and visit records. This database facilitates efficient management, organization, and analysis of information, enabling better care and service for animals and their owners.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
 <details>
 <summary>Database</summary>
   <ul>
@@ -100,105 +77,108 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- **[store comprehensive information about animals]**
+- **[unique Autoincrementing id for each animal]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
-## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+## Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
 
-In order to run this project you need:
+1. To install PostgreSQL, follow these steps:
 
-<!--
-Example command:
+Determine the appropriate installation method for your operating system. PostgreSQL supports various platforms, including Linux, macOS, and Windows. Visit the PostgreSQL website to find the installation method specific to your OS.
 
-```sh
- gem install rails
+1. For Linux:
+
 ```
- -->
+sudo apt-get install postgresql
+```
+
+or
+
+```
+sudo yum install postgresql-server
+```
+
+or
+
+```
+sudo dnf install postgresql-server postgresql-contrib
+```
+
+Other distributions: Refer to the PostgreSQL documentation or consult your distribution's documentation for installation instructions.
+
+2. For Windows:
+
+PostgreSQL Installer for Windows: Download the PostgreSQL Installer for Windows from the official website and run the installer. Follow the prompts and choose the components you want to install.
+
+3. For macOS
+
+Homebrew: If you have Homebrew installed, use the following command:
+
+```
+brew install postgresql
+```
+
+PostgreSQL for macOS: Download the PostgreSQL package for macOS from the official website and follow the installation instructions.
+
+During the installation process, you may be prompted to provide a password for the default PostgreSQL superuser (postgres). Choose a strong password and remember it for future use.
+After the installation is complete, PostgreSQL should be up and running as a service on your system. You can start and stop the service using the provided tools or by using the system services manager.
+
+Once PostgreSQL is installed, you can access it using the psql command-line tool or a graphical client.
 
 ### Setup
 
-Clone this repository to your desired folder:
+To get a local copy up and running, follow these steps.
+Choose the directory on your local machine where you want to copy project. For example:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
 ```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
+cd /home/user/name-of-your-directory
 ```
---->
+
+Clone the project using one of the options.
+
+Using HTTPS:
+
+```
+git clone https://github.com/beteland123/vet-clinic.git
+```
+
+You can also create the new directory just adding the name of it in the end of command. For example:
+
+```
+git clone https://github.com/beteland123/vet-clinic.git vet-clinic
+```
 
 ### Usage
 
-To run the project, execute the following command:
+To create the PostgreSQL database and view its contents, follow the steps below:
 
-<!--
-Example command:
+1. Ensure that PostgreSQL is installed on your system and the PostgreSQL server is running.
 
-```sh
-  rails server
-```
---->
+2. Open a terminal or command prompt.
 
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
+3. Run the following command to create the database:
 
 ```
- -->
+psql -U <username> -c "CREATE DATABASE <database_name>;"
+```
+
+Replace <username> with your PostgreSQL username and <database_name> with the desired name for your database.
+
+4. To view the contents of the database, use the following command:
+
+```
+psql -U <username> -d <database_name> -c "SELECT * FROM <table_name>;"
+```
+
+Replace <username> with your PostgreSQL username, <database_name> with the name of your database, and <table_name> with the name of the table you want to view.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -208,17 +188,14 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+### 👤 **Betel Andarge** 
+ - GitHub: [@Betel](https://github.com/beteland123)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+  - Twitter: [@Betel](https://twitter.com/BetelAndarge)
 
-👤 **Author2**
+  - LinkedIn: [Betel](https://linkedin.com/in/betelandarge)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,9 +205,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Add new tables & create relations between**
+- [ ] **Add schema diagram**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,9 +215,8 @@ Example:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Contributions are welcome! If you have any ideas, improvements, or bug fixes, please open an issue or submit a pull request. For major changes, please discuss them with the project maintainers first.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,7 +226,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project, please give a ⭐️ (Thank you)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -260,23 +236,9 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+- I would like to thank Microverse for this learning opportunity.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+- [Microverse team](https://microverse.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -284,8 +246,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
