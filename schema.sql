@@ -26,3 +26,21 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(50);
  ALTER TABLE animals ADD COLUMN species_id INT REFERENCES species(id);
  
  ALTER TABLE animals ADD COLUMN owner_id INT REFERENCES owners(id);
+ /*4th day*/
+ CREATE TABLE vets(
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(50) NOT Null,
+    age INT,
+    date_of_graduation DATE
+ );
+CREATE TABLE specializations (
+  vets_id INT REFERENCES vets (id),
+  species_id INT REFERENCES species (id),
+  PRIMARY KEY (vets_id, species_id)
+);
+CREATE TABLE visits (
+    visit_id SERIAL PRIMARY KEY NOT NULL,
+    animal_id INTEGER REFERENCES animals(id),
+    vet_id INTEGER REFERENCES vets(id),
+    visit_date DATE
+);
