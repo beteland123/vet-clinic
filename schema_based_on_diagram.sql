@@ -34,3 +34,9 @@ CREATE TABLE invoices(
     payed_at TIMESTAMP,
     medical_history_id INTEGER REFERENCES medical_histories(id),
 );
+
+CREATE TABLE patients(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(50),
+  date_of_birth DATE
+);
