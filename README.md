@@ -193,7 +193,11 @@ Replace <username> with your PostgreSQL username, <database_name> with the name 
 
   - LinkedIn: [Betel](https://linkedin.com/in/betelandarge)
 
+👤 **Micronaut JUAN DAVID DIAZ**
 
+- GitHub: [@JuanDBta](https://github.com/JuanDBta)
+- Twitter: [@simplebetsas](https://twitter.com/simplebetsas)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/simplebet/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
