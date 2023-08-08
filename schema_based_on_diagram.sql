@@ -15,7 +15,7 @@ CREATE TABLE treatment_card(
 CREATE TABLE treatments (
     id SERIAL PRIMARY KEY NOT NULL,
     type VARCHAR(50),
-    NAME VARCHAT(50)
+    name VARCHAR(50)
 );
 
 CREATE TABLE invoice_items(
