@@ -17,6 +17,7 @@ CREATE TABLE treatments (
     type VARCHAR(50),
     NAME VARCHAT(50)
 );
+
 CREATE TABLE invoice_items(
    id SERIAL PRIMARY KEY NOT NULL,
    unit_price DECIMAL(10,2),
@@ -24,4 +25,12 @@ CREATE TABLE invoice_items(
    total_price DECIMAL(10,2),
    invoice_id INTEGER REFERENCES invoices(id),
    treatment_id INTEGER REFERENCES treatments(id),
+);
+
+CREATE TABLE invoices(
+    id SERIAL PRIMARY KEY NOT NULL,
+    total_amount DECIMAL(10,2),
+    generate_at TIMESTAMP,
+    payed_at TIMESTAMP,
+    medical_history_id INTEGER REFERENCES medical_histories(id),
 );
